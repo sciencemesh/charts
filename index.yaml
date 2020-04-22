@@ -1,0 +1,20 @@
+apiVersion: v1
+entries:
+  iop:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2020-04-22T15:17:47.520976543Z"
+    dependencies:
+    - name: revad
+      repository: https://cs3org.github.io/charts
+      version: 0.1.0
+    description: ScienceMesh IOP is the reference Federated Scientific Mesh platform
+    digest: 90aaaf8f010d29915bcc9fe76300923452f7a7eb652229e8a7a1c784c7299550
+    home: https://developer.sciencemesh.io/
+    icon: https://developer.sciencemesh.io/logo.svg
+    name: iop
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/iop-0.0.1/iop-0.0.1.tgz
+    version: 0.0.1
+generated: "2020-04-22T15:17:47.399314605Z"
