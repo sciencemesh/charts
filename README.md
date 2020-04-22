@@ -17,9 +17,6 @@ Verify it's available and searh for charts:
 
 ```bash
 $ helm repo list
-NAME  	URL
+NAME       	URL
 sciencemesh	https://sciencemesh.github.io/charts/
-
-$ helm search repo sciencemesh
-NAME        	CHART VERSION	APP VERSION	DESCRIPTION
 ```
