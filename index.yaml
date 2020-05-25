@@ -1,5 +1,23 @@
 apiVersion: v1
 entries:
+  centralbrain:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2020-05-25T06:28:25.318116764Z"
+    dependencies:
+    - name: prometheus
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 11.2.2
+    - name: grafana
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 5.0.24
+    description: Central Brain is the obserbavility component for the IOP
+    digest: 0a34d9919abb178ec53542a3dcd7944af0a9ae873c9dbf892907c674d9e3e6d3
+    name: centralbrain
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/centralbrain-0.0.1/centralbrain-0.0.1.tgz
+    version: 0.0.1
   iop:
   - apiVersion: v2
     appVersion: 0.0.1
