@@ -2,12 +2,5 @@ apiVersion: v2
 name: centralbrain
 description: Central Brain is the obserbavility component for the IOP
 type: application
-version: 0.0.1
+version: 0.0.2
 appVersion: 0.0.1
-dependencies:
-- name: prometheus
-  version: 11.2.2
-  repository: "https://kubernetes-charts.storage.googleapis.com"
-- name: grafana
-  version: 5.0.24
-  repository: "https://kubernetes-charts.storage.googleapis.com"

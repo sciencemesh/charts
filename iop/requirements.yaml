@@ -1,0 +1,4 @@
+dependencies:
+- name: revad
+  version: "0.1.2"
+  repository: "https://cs3org.github.io/charts"
