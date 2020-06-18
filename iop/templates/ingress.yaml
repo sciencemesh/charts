@@ -14,10 +14,10 @@ spec:
     - host: {{ .Values.ingress.hostname }}
       http:
         paths:
-          - path: /
+          - path: {{ .Values.ingress.path }}
             backend:
               serviceName: {{ template "iop.fullname" . }}-revad
-              servicePort: grpc
+              servicePort: {{ .Values.ingress.servicePort }}
     {{- end }}
   {{- if .Values.ingress.tls }}
   tls:
