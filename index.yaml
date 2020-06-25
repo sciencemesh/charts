@@ -3,6 +3,23 @@ entries:
   centralbrain:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2020-06-25T14:13:04.553077304Z"
+    dependencies:
+    - name: prometheus
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 11.2.2
+    - name: grafana
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 5.0.24
+    description: Central Brain is the obserbavility component for the IOP
+    digest: 460f681588e66d29398bb33dde3b4bfe23295471c8a371882b389b1b26492969
+    name: centralbrain
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/centralbrain-0.0.2/centralbrain-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2020-05-25T06:28:25.318116764Z"
     dependencies:
     - name: prometheus
@@ -19,6 +36,22 @@ entries:
     - https://github.com/sciencemesh/charts/releases/download/centralbrain-0.0.1/centralbrain-0.0.1.tgz
     version: 0.0.1
   iop:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2020-06-25T14:13:04.638244902Z"
+    dependencies:
+    - name: revad
+      repository: https://cs3org.github.io/charts
+      version: 0.1.4
+    description: ScienceMesh IOP is the reference Federated Scientific Mesh platform
+    digest: 4b1deea06d2afe3ee11e49f5d44b24ffc28d0b0d1925a8b9eacc710fb59a64fb
+    home: https://developer.sciencemesh.io/
+    icon: https://developer.sciencemesh.io/logo.svg
+    name: iop
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/iop-0.0.2/iop-0.0.2.tgz
+    version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2020-04-22T15:17:47.520976543Z"
