@@ -2,7 +2,7 @@
 
 Helm Chart Repository for the ScienceMesh IOP project.
 
-The chart repository is available at [sciencemesh.github.io/charts](sciencemesh.github.io/charts).
+The chart repository is available at [https://sciencemesh.github.io/charts](https://sciencemesh.github.io/charts).
 
 ## Working with the repo
 
