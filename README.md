@@ -21,15 +21,9 @@ NAME       	URL
 sciencemesh	https://sciencemesh.github.io/charts/
 $ helm search repo sciencemesh
 NAME           	CHART VERSION	APP VERSION	DESCRIPTION
-sciencemesh/iop	0.0.1        	0.0.1      	ScienceMesh IOP is the reference Federated Scie...
+sciencemesh/iop	0.0.2        	0.0.1      	ScienceMesh IOP is the reference Federated Scie...
 ```
 
 ### Install the IOP
 
-```bash
-$ helm install iop sciencemesh/iop
-
-$ kubectl get svc
-NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)           AGE
-iop-revad    NodePort    10.96.182.170   <none>        20080:30812/TCP   16s
-```
+You can find detailed instructions on how to configure and deploy the IOP on the [Sciencemesh developer docs](https://developer.sciencemesh.io/docs/iop/deployment/kubernetes/).
