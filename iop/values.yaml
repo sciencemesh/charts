@@ -25,3 +25,6 @@ ingress:
         # - secretName: iop-tls
         #   hosts:
         #     - iop.local
+
+wopiserver:
+  enabled: false

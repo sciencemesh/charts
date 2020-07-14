@@ -1,4 +1,8 @@
 dependencies:
 - name: revad
-  version: "0.1.4"
+  version: "0.1.6"
   repository: "https://cs3org.github.io/charts"
+- name: wopiserver
+  version: "0.1.0"
+  repository: "https://cs3org.github.io/charts"
+  condition: wopiserver.enabled
