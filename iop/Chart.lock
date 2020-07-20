@@ -1,6 +1,0 @@
-dependencies:
-- name: revad
-  repository: https://cs3org.github.io/charts
-  version: 0.1.0
-digest: sha256:c6fb082f9525396e0bc2c1f2bbe107914d2e6bd120a035ae6ba34f4262a25994
-generated: "2020-04-22T15:32:32.187301+02:00"
