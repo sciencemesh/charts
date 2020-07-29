@@ -26,5 +26,11 @@ ingress:
         #   hosts:
         #     - iop.local
 
+storageProviders:
+  home:
+    enabled: false
+  reva:
+    enabled: false
+
 wopiserver:
   enabled: false

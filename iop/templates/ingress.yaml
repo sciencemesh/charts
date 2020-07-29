@@ -17,7 +17,7 @@ spec:
         paths:
           - path: {{ $ingress.path }}
             backend:
-              serviceName: {{ template "iop.fullname" $ }}-revad
+              serviceName: {{ template "iop.fullname" $ }}-gateway
               servicePort: {{ $service }}
     {{- end }}
   {{- if $ingress.tls }}
