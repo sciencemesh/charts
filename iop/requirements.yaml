@@ -3,16 +3,17 @@ dependencies:
   version: "1.2.0"
   repository: "https://cs3org.github.io/charts"
   alias: gateway
+  condition: gateway.enabled
 - name: revad
   version: "1.2.0"
   repository: "https://cs3org.github.io/charts"
   alias: storageprovider-home
-  condition: storageProviders.home.enabled
+  condition: storageprovider-home.enabled
 - name: revad
   version: "1.2.0"
   repository: "https://cs3org.github.io/charts"
   alias: storageprovider-reva
-  condition: storageProviders.reva.enabled
+  condition: storageprovider-reva.enabled
 - name: wopiserver
   version: "0.2.0"
   repository: "https://cs3org.github.io/charts"
