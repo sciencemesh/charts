@@ -1,0 +1,3 @@
+collabora-code:
+  enabled: false
+  image: latest

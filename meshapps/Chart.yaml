@@ -1,0 +1,6 @@
+apiVersion: v2
+name: meshapps
+description: Umbrella-repository of apps supported by the IOP and its adapters
+type: application
+version: 0.0.1
+appVersion: 0.0.1
