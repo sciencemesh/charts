@@ -1,3 +1,22 @@
 collabora-code:
   enabled: false
-  image: latest
+  image: 
+    tag: latest
+
+codimd:
+  enabled: false
+  image:
+    registry: gitlab-registry.cern.ch
+    repository: authoring/notes/codimd
+    tag: cernbox-integration
+  codimd:
+    authentication:
+      local:
+        enabled: false
+    extraEnvironmentVariables:
+      CMD_ALLOW_ANONYMOUS: true
+      CMD_ALLOW_ANONYMOUS_EDITS: true
+      CMD_ALLOW_ANONYMOUS_VIEWS: true
+      CMD_ALLOW_EMAIL_REGISTER: false
+      CMD_EMAIL: false 
+    versionCheck: false
