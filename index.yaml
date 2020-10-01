@@ -38,6 +38,38 @@ entries:
   iop:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2020-10-01T15:43:37.023892872Z"
+    dependencies:
+    - alias: gateway
+      condition: gateway.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.2.1
+    - alias: storageprovider-home
+      condition: storageprovider-home.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.2.1
+    - alias: storageprovider-reva
+      condition: storageprovider-reva.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.2.1
+    - condition: wopiserver.enabled
+      name: wopiserver
+      repository: https://cs3org.github.io/charts
+      version: 0.2.0
+    description: ScienceMesh IOP is the reference Federated Scientific Mesh platform
+    digest: d1fa9131de85b8b6f5babcec3c94c9557ec4ef67c9e5e6b526a954e1d18809e3
+    home: https://developer.sciencemesh.io/
+    icon: https://developer.sciencemesh.io/logo.svg
+    name: iop
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/iop-0.1.3/iop-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2020-09-15T12:11:44.657696867Z"
     dependencies:
     - alias: gateway
