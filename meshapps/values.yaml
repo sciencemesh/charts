@@ -9,6 +9,7 @@ codimd:
     registry: gitlab-registry.cern.ch
     repository: authoring/notes/codimd
     tag: cernbox-integration
+    pullPolicy: Always
   service:
     type: ClusterIP
   codimd:
