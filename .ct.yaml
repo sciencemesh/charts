@@ -4,5 +4,9 @@ target-branch: master
 chart-dirs:
   - .
 chart-repos:
-  - stable=https://charts.helm.sh/stable
+  - prometheus=https://prometheus-community.github.io/helm-charts
+  - grafana=https://grafana.github.io/helm-charts
+  - cs3org=https://cs3org.github.io/charts
+  - collabora-code=https://chrisingenhaag.github.io/helm/
+  - codimd=https://helm.codimd.dev/
 helm-extra-args: --timeout 600s

@@ -4,6 +4,7 @@ description: Central Brain is the obserbavility component for the IOP
 type: application
 version: 0.0.3
 appVersion: 0.0.1
+home: https://developer.sciencemesh.io/
 dependencies:
 - name: prometheus
   version: 12.0.0
@@ -11,3 +12,6 @@ dependencies:
 - name: grafana
   version: 6.1.9
   repository: "https://grafana.github.io/helm-charts"
+maintainers:
+  - name: SamuAlfageme
+    email: samuel.alfageme.sainz@cern.ch

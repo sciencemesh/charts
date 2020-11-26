@@ -2,7 +2,7 @@ apiVersion: v2
 name: iop
 description: ScienceMesh IOP is the reference Federated Scientific Mesh platform
 type: application
-version: 0.1.4
+version: 0.1.5
 appVersion: 0.0.1
 icon: https://developer.sciencemesh.io/logo.svg
 home: https://developer.sciencemesh.io/
@@ -24,6 +24,9 @@ dependencies:
   alias: storageprovider-reva
   condition: storageprovider-reva.enabled
 - name: wopiserver
-  version: "0.2.0"
+  version: "0.2.2"
   repository: "https://cs3org.github.io/charts"
   condition: wopiserver.enabled
+maintainers:
+  - name: SamuAlfageme
+    email: samuel.alfageme.sainz@cern.ch

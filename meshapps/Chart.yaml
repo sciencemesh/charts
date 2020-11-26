@@ -4,6 +4,7 @@ description: Umbrella-repository of apps supported by the IOP and its adapters
 type: application
 version: 0.0.3
 appVersion: 0.0.1
+home: https://developer.sciencemesh.io/
 dependencies:
 - name: collabora-code
   version: 2.0.0
@@ -13,3 +14,6 @@ dependencies:
   version: 0.1.8
   repository: "https://helm.codimd.dev/"
   condition: codimd.enabled
+maintainers:
+  - name: SamuAlfageme
+    email: samuel.alfageme.sainz@cern.ch
