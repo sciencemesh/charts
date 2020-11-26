@@ -3,3 +3,7 @@ dependencies:
   version: 1.0.6
   repository: "https://kubernetes-charts.storage.googleapis.com"
   condition: collabora-code.enabled
+- name: codimd
+  version: 0.1.7
+  repository: "https://helm.codimd.dev/"
+  condition: codimd.enabled
