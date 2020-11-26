@@ -217,6 +217,25 @@ entries:
   meshapps:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2020-11-26T14:14:01.291780344Z"
+    dependencies:
+    - condition: collabora-code.enabled
+      name: collabora-code
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 1.0.6
+    - condition: codimd.enabled
+      name: codimd
+      repository: https://helm.codimd.dev/
+      version: 0.1.7
+    description: Umbrella-repository of apps supported by the IOP and its adapters
+    digest: e8a19f957f1addb501fa692bea50c75b9e364f5a1b5247d1216aee144264133e
+    name: meshapps
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/meshapps-0.0.2/meshapps-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2020-09-25T09:58:48.808769664Z"
     dependencies:
     - condition: collabora-code.enabled
