@@ -15,6 +15,6 @@ dependencies:
   alias: storageprovider-reva
   condition: storageprovider-reva.enabled
 - name: wopiserver
-  version: "0.2.0"
+  version: "0.2.2"
   repository: "https://cs3org.github.io/charts"
   condition: wopiserver.enabled
