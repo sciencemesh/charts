@@ -15,3 +15,7 @@ dependencies:
 maintainers:
   - name: SamuAlfageme
     email: samuel.alfageme.sainz@cern.ch
+annotations:
+  artifacthub.io/changes: |
+    - Migrate chart dependencies to Helm3
+    - Lint and test the installation on PRs

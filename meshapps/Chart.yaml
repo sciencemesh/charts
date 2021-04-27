@@ -17,3 +17,14 @@ dependencies:
 maintainers:
   - name: SamuAlfageme
     email: samuel.alfageme.sainz@cern.ch
+annotations:
+  artifacthub.io/changes: |
+    - Migrate chart dependencies to Helm3
+    - Lint and test the installation on PRs
+  artifacthub.io/images: |
+    - name: codimd
+      image: gitlab-registry.cern.ch/authoring/notes/codimd:cernbox-integration
+    - name: postgresql
+      image: bitnami/postgresql:11.7.0-debian-10-r55
+    - name: collabora-code
+      image: collabora/code:latest
