@@ -9,17 +9,17 @@ home: https://developer.sciencemesh.io/
 source: https://github.com/sciencemesh/sciencemesh
 dependencies:
 - name: revad
-  version: "1.2.1"
+  version: "1.2.3"
   repository: "https://cs3org.github.io/charts"
   alias: gateway
   condition: gateway.enabled
 - name: revad
-  version: "1.2.1"
+  version: "1.2.3"
   repository: "https://cs3org.github.io/charts"
   alias: storageprovider-home
   condition: storageprovider-home.enabled
 - name: revad
-  version: "1.2.1"
+  version: "1.2.3"
   repository: "https://cs3org.github.io/charts"
   alias: storageprovider-reva
   condition: storageprovider-reva.enabled
@@ -34,6 +34,7 @@ annotations:
   artifacthub.io/changes: |
     - Migrate chart dependencies to Helm3
     - Lint and test the installation on PRs
+    - Fix: bump revad chart to v1.2.3 to prevent premature exit
   artifacthub.io/images: |
     - name: revad
       image: cs3org/revad:latest
