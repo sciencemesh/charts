@@ -2,5 +2,29 @@ apiVersion: v2
 name: meshapps
 description: Umbrella-repository of apps supported by the IOP and its adapters
 type: application
-version: 0.0.2
+version: 0.0.3
 appVersion: 0.0.1
+home: https://developer.sciencemesh.io/
+dependencies:
+- name: collabora-code
+  version: 2.0.0
+  repository: "https://chrisingenhaag.github.io/helm/"
+  condition: collabora-code.enabled
+- name: codimd
+  version: 0.1.8
+  repository: "https://helm.codimd.dev/"
+  condition: codimd.enabled
+maintainers:
+  - name: SamuAlfageme
+    email: samuel.alfageme.sainz@cern.ch
+annotations:
+  artifacthub.io/changes: |
+    - Migrate chart dependencies to Helm3
+    - Lint and test the installation on PRs
+  artifacthub.io/images: |
+    - name: codimd
+      image: gitlab-registry.cern.ch/authoring/notes/codimd:cernbox-integration
+    - name: postgresql
+      image: bitnami/postgresql:11.7.0-debian-10-r55
+    - name: collabora-code
+      image: collabora/code:latest
