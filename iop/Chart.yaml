@@ -2,8 +2,43 @@ apiVersion: v2
 name: iop
 description: ScienceMesh IOP is the reference Federated Scientific Mesh platform
 type: application
-version: 0.1.4
+version: 0.1.5
 appVersion: 0.0.1
 icon: https://developer.sciencemesh.io/logo.svg
 home: https://developer.sciencemesh.io/
 source: https://github.com/sciencemesh/sciencemesh
+dependencies:
+- name: revad
+  version: "1.2.3"
+  repository: "https://cs3org.github.io/charts"
+  alias: gateway
+  condition: gateway.enabled
+- name: revad
+  version: "1.2.3"
+  repository: "https://cs3org.github.io/charts"
+  alias: storageprovider-home
+  condition: storageprovider-home.enabled
+- name: revad
+  version: "1.2.3"
+  repository: "https://cs3org.github.io/charts"
+  alias: storageprovider-reva
+  condition: storageprovider-reva.enabled
+- name: wopiserver
+  version: "0.2.2"
+  repository: "https://cs3org.github.io/charts"
+  condition: wopiserver.enabled
+maintainers:
+  - name: SamuAlfageme
+    email: samuel.alfageme.sainz@cern.ch
+annotations:
+  artifacthub.io/changes: |
+    - "Migrate chart dependencies to Helm3"
+    - "Lint and test the installation on PRs"
+    - "Fix: bump revad chart to v1.2.3 to prevent premature exit"
+  artifacthub.io/images: |
+    - name: revad
+      image: cs3org/revad:latest
+    - name: wopiserver
+      image: cs3org/wopiserver:latest
+    - name: wopibridge
+      image: cs3org/wopibridge:latest

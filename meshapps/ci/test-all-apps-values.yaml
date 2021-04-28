@@ -1,0 +1,5 @@
+collabora-code:
+  enabled: true
+
+codimd:
+  enabled: true
