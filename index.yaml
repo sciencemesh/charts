@@ -1,6 +1,31 @@
 apiVersion: v1
 entries:
   centralbrain:
+  - annotations:
+      artifacthub.io/changes: |
+        - Migrate chart dependencies to Helm3
+        - Lint and test the installation on PRs
+    apiVersion: v2
+    appVersion: 0.0.1
+    created: "2021-04-28T07:09:41.123698427Z"
+    dependencies:
+    - name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 12.0.0
+    - name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.1.9
+    description: Central Brain is the obserbavility component for the IOP
+    digest: cbf05a7f2908cccb8f1cdd4f131e6115b616373b916a514370d8de678bff5ebe
+    home: https://developer.sciencemesh.io/
+    maintainers:
+    - email: samuel.alfageme.sainz@cern.ch
+      name: SamuAlfageme
+    name: centralbrain
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/centralbrain-0.0.3/centralbrain-0.0.3.tgz
+    version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2020-06-25T14:13:04.553077304Z"
@@ -36,6 +61,53 @@ entries:
     - https://github.com/sciencemesh/charts/releases/download/centralbrain-0.0.1/centralbrain-0.0.1.tgz
     version: 0.0.1
   iop:
+  - annotations:
+      artifacthub.io/changes: |
+        - "Migrate chart dependencies to Helm3"
+        - "Lint and test the installation on PRs"
+        - "Fix: bump revad chart to v1.2.3 to prevent premature exit"
+      artifacthub.io/images: |
+        - name: revad
+          image: cs3org/revad:latest
+        - name: wopiserver
+          image: cs3org/wopiserver:latest
+        - name: wopibridge
+          image: cs3org/wopibridge:latest
+    apiVersion: v2
+    appVersion: 0.0.1
+    created: "2021-04-28T07:09:41.278683271Z"
+    dependencies:
+    - alias: gateway
+      condition: gateway.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.2.3
+    - alias: storageprovider-home
+      condition: storageprovider-home.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.2.3
+    - alias: storageprovider-reva
+      condition: storageprovider-reva.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.2.3
+    - condition: wopiserver.enabled
+      name: wopiserver
+      repository: https://cs3org.github.io/charts
+      version: 0.2.2
+    description: ScienceMesh IOP is the reference Federated Scientific Mesh platform
+    digest: 2cb1eee0b495760f5a6eb6bc13b18ab8a0b7678f4954681fe4e910c91f9c65e3
+    home: https://developer.sciencemesh.io/
+    icon: https://developer.sciencemesh.io/logo.svg
+    maintainers:
+    - email: samuel.alfageme.sainz@cern.ch
+      name: SamuAlfageme
+    name: iop
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/iop-0.1.5/iop-0.1.5.tgz
+    version: 0.1.5
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2021-04-14T14:37:53.220816583Z"
@@ -247,6 +319,40 @@ entries:
     - https://github.com/sciencemesh/charts/releases/download/iop-0.0.1/iop-0.0.1.tgz
     version: 0.0.1
   meshapps:
+  - annotations:
+      artifacthub.io/changes: |
+        - Migrate chart dependencies to Helm3
+        - Lint and test the installation on PRs
+      artifacthub.io/images: |
+        - name: codimd
+          image: gitlab-registry.cern.ch/authoring/notes/codimd:cernbox-integration
+        - name: postgresql
+          image: bitnami/postgresql:11.7.0-debian-10-r55
+        - name: collabora-code
+          image: collabora/code:latest
+    apiVersion: v2
+    appVersion: 0.0.1
+    created: "2021-04-28T07:09:41.441818927Z"
+    dependencies:
+    - condition: collabora-code.enabled
+      name: collabora-code
+      repository: https://chrisingenhaag.github.io/helm/
+      version: 2.0.0
+    - condition: codimd.enabled
+      name: codimd
+      repository: https://helm.codimd.dev/
+      version: 0.1.8
+    description: Umbrella-repository of apps supported by the IOP and its adapters
+    digest: abbf79b3ecd35ffba0ffa8c3a4a270dc8b7225e1bc129940dc77e435f1c18d65
+    home: https://developer.sciencemesh.io/
+    maintainers:
+    - email: samuel.alfageme.sainz@cern.ch
+      name: SamuAlfageme
+    name: meshapps
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/meshapps-0.0.3/meshapps-0.0.3.tgz
+    version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2020-11-26T14:14:01.291780344Z"
