@@ -2,10 +2,10 @@ gateway:
   enabled: true
 
 storageprovider-home:
-  enabled: false
+  enabled: true
 
 storageprovider-reva:
-  enabled: false
+  enabled: true
 
 wopiserver:
-  enabled: false
+  enabled: true
