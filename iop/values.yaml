@@ -1,31 +1,3 @@
-ingress:
-  enabled: false
-  services:
-    http:
-      hostname: iop.local
-      path: /iop
-      # path: /iop(/|$)(.*)
-      annotations: {}
-        # kubernetes.io/ingress.class: nginx
-        # nginx.ingress.kubernetes.io/ssl-redirect: "true"
-        # nginx.ingress.kubernetes.io/rewrite-target: /$2
-      tls: []
-        # Secrets must be present in the namespace beforehand.
-        # - secretName: iop-tls
-        #   hosts:
-        #     - iop.local
-    grpc:
-      hostname: iop.local
-      path: /
-      annotations: {}
-        # kubernetes.io/ingress.class: nginx
-        # nginx.ingress.kubernetes.io/ssl-redirect: "true"
-        # nginx.ingress.kubernetes.io/backend-protocol: "GRPC"
-      tls: []
-        # - secretName: iop-tls
-        #   hosts:
-        #     - iop.local
-
 gateway:
   enabled: true
 
