@@ -14,6 +14,7 @@ gateway:
       [grpc.services.storageregistry.drivers.static.rules]
       "/home" = {"address" = "iop-storageprovider-home:17000"}
       "/reva" = {"address" = "iop-storageprovider-reva:18000"}
+      "/public" = {"address" = "iop-storageprovider-public:16000"}
       "123e4567-e89b-12d3-a456-426655440000" = {"address" = "iop-storageprovider-reva:18000"}
 
       [grpc.services.authprovider]
@@ -76,6 +77,30 @@ storageprovider-reva:
 
       [http]
       address = "0.0.0.0:18001"
+
+      [http.services.dataprovider]
+      driver = "local"
+
+storageprovider-public:
+  enabled: true
+  service:
+    grpc:
+      port: 16000
+    http:
+      port: 16001
+  configFiles:
+    revad.toml: |
+      [grpc]
+      address = "0.0.0.0:16000"
+
+      [grpc.services.storageprovider]
+      driver = "local"
+      mount_path = "/public"
+      mount_id = "123e4567-e89b-12d3-a456-426655440000"
+      data_server_url = "http://iop-storageprovider-reva:16001/public"
+
+      [http]
+      address = "0.0.0.0:16001"
 
       [http.services.dataprovider]
       driver = "local"
