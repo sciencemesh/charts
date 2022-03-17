@@ -64,6 +64,53 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Update revad to v1.18 and add public storageprovider
+          links:
+            - name: revad
+              url: https://github.com/cs3org/charts/pull/32
+    apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-03-17T09:19:10.628711466Z"
+    dependencies:
+    - alias: gateway
+      condition: gateway.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.3.3
+    - alias: storageprovider-home
+      condition: storageprovider-home.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.3.3
+    - alias: storageprovider-reva
+      condition: storageprovider-reva.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.3.3
+    - alias: storageprovider-public
+      condition: storageprovider-public.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.3.3
+    - condition: wopiserver.enabled
+      name: wopiserver
+      repository: https://cs3org.github.io/charts
+      version: 0.3.0
+    description: ScienceMesh IOP is the reference Federated Scientific Mesh platform
+    digest: 0db2e30e56b59e5091196abc0502d869306f58776469317c3fac50ad38fdd33a
+    home: https://developer.sciencemesh.io/
+    icon: https://developer.sciencemesh.io/logo.svg
+    maintainers:
+    - email: samuel.alfageme.sainz@cern.ch
+      name: SamuAlfageme
+    name: iop
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/iop-0.2.2/iop-0.2.2.tgz
+    version: 0.2.2
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Update revad and wopiserver versions to latest stable
           links:
             - name: wopiserver
