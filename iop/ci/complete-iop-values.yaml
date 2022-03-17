@@ -93,17 +93,18 @@ storageprovider-public:
       [grpc]
       address = "0.0.0.0:16000"
 
-      [grpc.services.storageprovider]
-      driver = "local"
+      [grpc.services.publicstorageprovider]
+      driver = "localhome"
       mount_path = "/public"
       mount_id = "123e4567-e89b-12d3-a456-426655440000"
-      data_server_url = "http://iop-storageprovider-reva:16001/public"
+      data_server_url = "http://iop-storageprovider-public:16001/data"
+      gateway_addr = "iop-gateway:19000"
 
-      [http]
-      address = "0.0.0.0:16001"
+      [grpc.services.authprovider]
+      auth_manager = "publicshares"
 
-      [http.services.dataprovider]
-      driver = "local"
+      [grpc.services.authprovider.auth_managers.publicshares]
+      gateway_addr = "iop-gateway:19000"
 
 wopiserver:
   enabled: true
