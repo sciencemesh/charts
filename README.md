@@ -26,4 +26,4 @@ sciencemesh/iop	0.0.2        	0.0.1      	ScienceMesh IOP is the reference Feder
 
 ### Install the IOP
 
-You can find detailed instructions on how to configure and deploy the IOP on the [Sciencemesh developer docs](https://developer.sciencemesh.io/docs/iop/deployment/kubernetes/).
+You can find detailed instructions on how to configure and deploy the IOP on the [Sciencemesh developer docs](https://developer.sciencemesh.io/docs/technical-documentation/iop/deployment/kubernetes/).
