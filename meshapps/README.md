@@ -11,5 +11,5 @@ Colletion of apps supported by/compatible with the IOP and its adaptors.
 
 - **Integration reference:** https://developer.sciencemesh.io/docs/technical-documentation/integrations/codimd
 - **Requirements:**
-  - `iop.wopiserver.enabled=true` and `iop.wopiserver.wopibridge.enabled=true`
-  - `iop` chart version >= `0.1.1` (`wopiserver` chart >= `0.2.0`)
+  - `iop.wopiserver.enabled=true`
+  - `iop` chart version >= `0.1.1` (`wopiserver` chart >= `0.9.0`)

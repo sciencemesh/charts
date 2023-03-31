@@ -1,5 +1,4 @@
 gateway:
-  enabled: true
   configFiles:
     revad.toml: |
       [grpc.services.gateway]
@@ -108,3 +107,7 @@ storageprovider-public:
 
 wopiserver:
   enabled: true
+  config:
+    codimd:
+      enabled: true
+      inturl: http://meshapps-codimd

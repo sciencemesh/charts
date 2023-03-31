@@ -1,6 +1,3 @@
-gateway:
-  enabled: true
-
 storageprovider-home:
   enabled: false
 
@@ -10,5 +7,12 @@ storageprovider-reva:
 storageprovider-public:
   enabled: false
 
-wopiserver:
+# TODO not yet used
+shareprovider-ocm:
+  enabled: false
+
+appprovider-collabora:
+  enabled: false
+
+appprovider-codimd:
   enabled: false
