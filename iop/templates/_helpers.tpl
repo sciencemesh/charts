@@ -9,3 +9,9 @@ wopiserver:
       enabled: {{ (index .Values "appprovider-codimd").enabled }}
       inturl: http://meshapps-codimd
 {{ end }}
+{{ if (index .Values "appprovider-codimd").enabled }}
+codimd:
+  codimd:
+    extraEnvironmentVariables:
+      CMD_DOMAIN: https://{{ .Values.ingress.hostname }}
+{{ end }}

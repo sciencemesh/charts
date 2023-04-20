@@ -28,7 +28,6 @@ codimd:
       QT_QPA_PLATFORM:
       NODE_TLS_REJECT_UNAUTHORIZED: 0
       CMD_API_BODY_LIMIT: 210000
-      #CMD_DOMAIN: https://{{ .Values.ingress.hostname }}
       #CMD_URL_ADDPORT: true
       CMD_URL_PATH: codimd
       CMD_APPLIANCE_MODE: true

@@ -44,6 +44,8 @@ dependencies:
 maintainers:
   - name: SamuAlfageme
     email: samuel.alfageme.sainz@cern.ch
+  - name: glpatcern
+    email: Giuseppe.LoPresti@cern.ch
 annotations:
   artifacthub.io/changes: |
     - kind: changed
