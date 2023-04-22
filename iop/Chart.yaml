@@ -49,6 +49,13 @@ maintainers:
 annotations:
   artifacthub.io/changes: |
     - kind: changed
+      description: Add app providers for Collabora and CodiMD and updated revad to support OCM
+      links:
+        - name: Apps config rehaul
+          url: https://github.com/sciencemesh/charts/pull/28
+        - name: Update revad to include OCM
+          url: https://github.com/cs3org/charts/pull/51
+    - kind: changed
       description: Update revad chart to support customconfigmaps and imagePullSecrets
       links:
         - name: Support for 'cfgmapName'
