@@ -5,6 +5,11 @@ on:
     branches:
       - master
   workflow_dispatch:
+    inputs:
+      bump:
+        description: "Release bump: major, minor or patch"
+        required: true
+        default: "patch"
 
 jobs:
   release:
