@@ -9,31 +9,31 @@ home: https://developer.sciencemesh.io/
 source: https://github.com/sciencemesh/sciencemesh
 dependencies:
 - name: revad
-  version: "1.6.0"
+  version: "1.6.1"
   repository: "https://cs3org.github.io/charts"
   alias: gateway
 - name: revad
-  version: "1.6.0"
+  version: "1.6.1"
   repository: "https://cs3org.github.io/charts"
   alias: storageprovider-home
   condition: storageprovider-home.enabled
 - name: revad
-  version: "1.6.0"
+  version: "1.6.1"
   repository: "https://cs3org.github.io/charts"
   alias: storageprovider-reva
   condition: storageprovider-reva.enabled
 - name: revad
-  version: "1.6.0"
+  version: "1.6.1"
   repository: "https://cs3org.github.io/charts"
   alias: storageprovider-public
   condition: storageprovider-public.enabled
 - name: revad
-  version: "1.6.0"
+  version: "1.6.1"
   repository: "https://cs3org.github.io/charts"
   alias: appprovider-collabora
   condition: appprovider-collabora.enabled
 - name: revad
-  version: "1.6.0"
+  version: "1.6.1"
   repository: "https://cs3org.github.io/charts"
   alias: appprovider-codimd
   condition: appprovider-codimd.enabled
