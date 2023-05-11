@@ -64,6 +64,78 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Add app providers for Collabora and CodiMD and updated revad to support OCM
+          links:
+            - name: Apps config rehaul
+              url: https://github.com/sciencemesh/charts/pull/28
+            - name: Update revad to include OCM
+              url: https://github.com/cs3org/charts/pull/51
+        - kind: changed
+          description: Update revad chart to support customconfigmaps and imagePullSecrets
+          links:
+            - name: Support for 'cfgmapName'
+              url: https://github.com/cs3org/charts/pull/40
+            - name: Support for 'imagePullSecrets'
+              url: https://github.com/cs3org/charts/pull/44
+        - kind: removed
+          description: Major wopiserver chart refactoring; drop wopibridge
+          links:
+            - name: Changes to the WOPI Server
+              url: https://github.com/cs3org/charts/pull/35
+    apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-05-11T16:54:08.389159906Z"
+    dependencies:
+    - alias: gateway
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.6.1
+    - alias: storageprovider-home
+      condition: storageprovider-home.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.6.1
+    - alias: storageprovider-reva
+      condition: storageprovider-reva.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.6.1
+    - alias: storageprovider-public
+      condition: storageprovider-public.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.6.1
+    - alias: appprovider-collabora
+      condition: appprovider-collabora.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.6.1
+    - alias: appprovider-codimd
+      condition: appprovider-codimd.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.6.1
+    - condition: wopiserver.enabled
+      name: wopiserver
+      repository: https://cs3org.github.io/charts
+      version: 0.9.0
+    description: ScienceMesh IOP is the reference Federated Scientific Mesh platform
+    digest: b56529b9f5ff9c97a312eff2d14ab993f4c50fbcbd9acc983d95ce12d28e96a6
+    home: https://developer.sciencemesh.io/
+    icon: https://developer.sciencemesh.io/logo.svg
+    maintainers:
+    - email: samuel.alfageme.sainz@cern.ch
+      name: SamuAlfageme
+    - email: Giuseppe.LoPresti@cern.ch
+      name: glpatcern
+    name: iop
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/iop-0.4.0/iop-0.4.0.tgz
+    version: 0.4.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Update revad chart to support customconfigmaps and imagePullSecrets
           links:
             - name: Support for 'cfgmapName'
@@ -511,6 +583,40 @@ entries:
     - https://github.com/sciencemesh/charts/releases/download/iop-0.0.1/iop-0.0.1.tgz
     version: 0.0.1
   meshapps:
+  - annotations:
+      artifacthub.io/changes: |
+        - Migrate chart dependencies to Helm3
+        - Lint and test the installation on PRs
+      artifacthub.io/images: |
+        - name: codimd
+          image: gitlab-registry.cern.ch/authoring/notes/codimd:cernbox-integration
+        - name: postgresql
+          image: bitnami/postgresql:11.7.0-debian-10-r55
+        - name: collabora-code
+          image: collabora/code:latest
+    apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-05-11T16:54:08.578011729Z"
+    dependencies:
+    - condition: collabora-code.enabled
+      name: collabora-code
+      repository: https://chrisingenhaag.github.io/helm/
+      version: 2.0.0
+    - condition: codimd.enabled
+      name: codimd
+      repository: https://helm.codimd.dev/
+      version: 0.1.8
+    description: Umbrella-repository of apps supported by the IOP and its adapters
+    digest: 4d5f9f5d0ae4bb55b1010d5f6d831a75ef0dcce408fe9774fbcbf5fa1a741dfa
+    home: https://developer.sciencemesh.io/
+    maintainers:
+    - email: samuel.alfageme.sainz@cern.ch
+      name: SamuAlfageme
+    name: meshapps
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/meshapps-0.1.0/meshapps-0.1.0.tgz
+    version: 0.1.0
   - annotations:
       artifacthub.io/changes: |
         - Migrate chart dependencies to Helm3
