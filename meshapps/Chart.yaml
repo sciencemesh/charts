@@ -2,7 +2,7 @@ apiVersion: v2
 name: meshapps
 description: Umbrella-repository of apps supported by the IOP and its adapters
 type: application
-version: 0.0.3
+version: 0.1.0
 appVersion: 0.0.1
 home: https://developer.sciencemesh.io/
 dependencies:
