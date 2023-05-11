@@ -1,4 +1,4 @@
-collabora-code:
+collabora:
   enabled: false
   image:
     tag: latest
@@ -20,9 +20,17 @@ codimd:
       CMD_ALLOW_ANONYMOUS: true
       CMD_ALLOW_ANONYMOUS_EDITS: true
       CMD_ALLOW_ANONYMOUS_VIEWS: true
-      CMD_ALLOW_EMAIL_REGISTER: false
-      CMD_APPLIANCE_MODE: true
+      CMD_ALLOW_FREEURL: true
       CMD_EMAIL: false
+      CMD_ALLOW_EMAIL_REGISTER: false
+      CMD_ALLOW_GRAVATAR: true
+      CMD_ALLOW_PDF_EXPORT: true
+      QT_QPA_PLATFORM:
+      NODE_TLS_REJECT_UNAUTHORIZED: 0
+      CMD_API_BODY_LIMIT: 210000
+      # CMD_URL_ADDPORT: true
+      CMD_URL_PATH: codimd
+      CMD_APPLIANCE_MODE: true
     versionCheck: false
     imageStorePersistentVolume:
       enabled: false

@@ -1,5 +1,4 @@
 gateway:
-  enabled: true
   configFiles:
     revad.toml: |
       [grpc.services.gateway]
@@ -30,6 +29,7 @@ gateway:
 
       [http.services.datagateway]
       [http.services.ocmd]
+      [http.services.ocmprovider]
       [http.services.ocdav]
       [http.services.ocs]
 
@@ -106,5 +106,15 @@ storageprovider-public:
       [grpc.services.authprovider.auth_managers.publicshares]
       gateway_addr = "iop-gateway:19000"
 
+appprovider-collabora:
+  enabled: true
+
+appprovider-codimd:
+  enabled: true
+
 wopiserver:
   enabled: true
+  config:
+    codimd:
+      enabled: true
+      inturl: http://meshapps-codimd

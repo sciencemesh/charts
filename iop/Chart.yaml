@@ -2,41 +2,59 @@ apiVersion: v2
 name: iop
 description: ScienceMesh IOP is the reference Federated Scientific Mesh platform
 type: application
-version: 0.3.1
+version: 0.4.0
 appVersion: 0.0.1
 icon: https://developer.sciencemesh.io/logo.svg
 home: https://developer.sciencemesh.io/
 source: https://github.com/sciencemesh/sciencemesh
 dependencies:
 - name: revad
-  version: "1.4.2"
+  version: "1.6.1"
   repository: "https://cs3org.github.io/charts"
   alias: gateway
-  condition: gateway.enabled
 - name: revad
-  version: "1.4.2"
+  version: "1.6.1"
   repository: "https://cs3org.github.io/charts"
   alias: storageprovider-home
   condition: storageprovider-home.enabled
 - name: revad
-  version: "1.4.2"
+  version: "1.6.1"
   repository: "https://cs3org.github.io/charts"
   alias: storageprovider-reva
   condition: storageprovider-reva.enabled
 - name: revad
-  version: "1.4.2"
+  version: "1.6.1"
   repository: "https://cs3org.github.io/charts"
   alias: storageprovider-public
   condition: storageprovider-public.enabled
+- name: revad
+  version: "1.6.1"
+  repository: "https://cs3org.github.io/charts"
+  alias: appprovider-collabora
+  condition: appprovider-collabora.enabled
+- name: revad
+  version: "1.6.1"
+  repository: "https://cs3org.github.io/charts"
+  alias: appprovider-codimd
+  condition: appprovider-codimd.enabled
 - name: wopiserver
-  version: "0.5.2"
+  version: "0.9.0"
   repository: "https://cs3org.github.io/charts"
   condition: wopiserver.enabled
 maintainers:
   - name: SamuAlfageme
     email: samuel.alfageme.sainz@cern.ch
+  - name: glpatcern
+    email: Giuseppe.LoPresti@cern.ch
 annotations:
   artifacthub.io/changes: |
+    - kind: changed
+      description: Add app providers for Collabora and CodiMD and updated revad to support OCM
+      links:
+        - name: Apps config rehaul
+          url: https://github.com/sciencemesh/charts/pull/28
+        - name: Update revad to include OCM
+          url: https://github.com/cs3org/charts/pull/51
     - kind: changed
       description: Update revad chart to support customconfigmaps and imagePullSecrets
       links:
