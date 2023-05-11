@@ -64,6 +64,60 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Update revad chart to support customconfigmaps and imagePullSecrets
+          links:
+            - name: Support for 'cfgmapName'
+              url: https://github.com/cs3org/charts/pull/40
+            - name: Support for 'imagePullSecrets'
+              url: https://github.com/cs3org/charts/pull/44
+        - kind: removed
+          description: Major wopiserver chart refactoring; drop wopibridge
+          links:
+            - name: Changes to the WOPI Server
+              url: https://github.com/cs3org/charts/pull/35
+    apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-05-11T16:19:31.121426603Z"
+    dependencies:
+    - alias: gateway
+      condition: gateway.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.4.2
+    - alias: storageprovider-home
+      condition: storageprovider-home.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.4.2
+    - alias: storageprovider-reva
+      condition: storageprovider-reva.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.4.2
+    - alias: storageprovider-public
+      condition: storageprovider-public.enabled
+      name: revad
+      repository: https://cs3org.github.io/charts
+      version: 1.4.2
+    - condition: wopiserver.enabled
+      name: wopiserver
+      repository: https://cs3org.github.io/charts
+      version: 0.5.2
+    description: ScienceMesh IOP is the reference Federated Scientific Mesh platform
+    digest: 171eac3b839c72c7ad7e35dab0bf292f8b1e3bafb5792560f21db0327b716f8e
+    home: https://developer.sciencemesh.io/
+    icon: https://developer.sciencemesh.io/logo.svg
+    maintainers:
+    - email: samuel.alfageme.sainz@cern.ch
+      name: SamuAlfageme
+    name: iop
+    type: application
+    urls:
+    - https://github.com/sciencemesh/charts/releases/download/iop-0.3.1/iop-0.3.1.tgz
+    version: 0.3.1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Update revad to v1.18 and add public storageprovider
           links:
             - name: revad
