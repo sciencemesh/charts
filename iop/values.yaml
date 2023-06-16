@@ -1,9 +1,3 @@
-revad2:
-  enabled: true
-
-revad3:
-  enabled: true
-
 storageprovider-home:
   enabled: false
 

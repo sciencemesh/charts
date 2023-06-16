@@ -15,16 +15,6 @@ dependencies:
 - name: revad
   version: "1.6.1"
   repository: "https://cs3org.github.io/charts"
-  alias: revad2
-  condition: revad2.enabled
-- name: revad
-  version: "1.6.1"
-  repository: "https://cs3org.github.io/charts"
-  alias: revad3
-  condition: revad3.enabled
-- name: revad
-  version: "1.6.1"
-  repository: "https://cs3org.github.io/charts"
   alias: storageprovider-home
   condition: storageprovider-home.enabled
 - name: revad
